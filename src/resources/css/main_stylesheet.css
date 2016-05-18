@@ -5,6 +5,15 @@
   -o-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }*/
+/*
+    //////////////////
+    This is the general or broad styling.
+    //////////////////
+ */
+
+.bolded {
+  font-weight: 600;
+}
 
 body {
   text-align: center;
@@ -16,6 +25,12 @@ body {
   width: 900px;
   margin: 0 auto;
 }
+
+/*
+    //////////////////
+    This is styling for the navbar.
+    //////////////////
+ */
 
 nav {
   position: fixed;
@@ -47,15 +62,12 @@ nav ul li a {
   text-decoration: none;
   position: relative;
   color: grey;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
   padding: 15px;
   padding-left: 35px;
   padding-right: 35px;
 }
-
-/*nav ul li a:hover, nav ul li a:active {
-  border-bottom: 2px solid lightgrey;
-  padding-bottom: 8px;
-}*/
 
 /* TODO: try to make this coalesce to a dot, and to make hover extend out to touch each element */
 nav ul li a:before {
@@ -79,6 +91,12 @@ nav ul li a:hover:before {
   transform: scaleX(0.5);
 }
 
+/*
+    //////////////////
+    This is the styling for the intro section.
+    //////////////////
+ */
+
 h1 {
 	color: darkgrey;
 	font-family: 'Fjalla One';
@@ -93,20 +111,293 @@ h1 {
 
 #header-image {
   /* TODO: fix this when the website is done */
-  padding-bottom: 5%;
+  /*padding-bottom: 10px;*/
 }
 
 #header-paragraph {
   color: #808080;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
   font-size: 20px;
-  padding-bottom: 15%;
+  padding-bottom: 20%;
   width: 400px;
   vertical-align: middle;
   display: inline-table;
 }
 
-/*div {
-  background-color: lightgrey;
-  padding-top: 75px;
-}*/
+/*
+    //////////////////
+    This is the styling for the flying section
+    //////////////////
+ */
+
+
+#flying-paragraph {
+  overflow: auto;
+  display: block;
+}
+
+#flying-header {
+  color: #808080;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  overflow: auto;
+  display: block;
+  text-align: right;
+  margin-top: 60px;
+  margin-right: 80px;
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+
+#flying-image {
+  float: left;
+  clear: both;
+  padding-left: 40px;
+}
+
+#flying-text {
+  text-align: right;
+  float: right;
+  margin: 10px;
+  margin-right: 80px;
+  padding-right: 20px;
+  width: 300px;
+  color: #808080;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+}
+
+/*
+    //////////////////
+    This is the styling for the flying features section
+    //////////////////
+ */
+
+ #flying-feature {
+   /* TODO: change this for the finished site. Just for WIP mode */
+   margin-bottom: 150px;
+   margin-top: 50px;
+ }
+
+ #flying-feature-section {
+   overflow: auto;
+   display: block;
+ }
+
+ #flying-feature-div {
+   float: none;
+   width: 170px;
+   margin: 50px;
+   margin-top: 0;
+   display: inline-block;
+ }
+
+ #flying-feature-div p {
+   text-align: center;;
+   color: #808080;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 200;
+   font-size: 16px;
+ }
+
+ #flying-feature-image {
+   margin: 10px;
+ }
+
+/*
+    //////////////////
+    This is the styling for the rolling section
+    //////////////////
+ */
+
+#rolling {
+  /* TODO: change this for the finished site. Just for WIP mode */
+}
+
+#rolling-paragraph {
+  overflow: auto;
+  display: block;
+}
+
+#rolling-header {
+  color: #808080;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  overflow: auto;
+  display: block;
+  text-align: justify;
+  margin-top: 60px;
+  margin-left: 80px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+#rolling-image {
+  float: right;
+  clear: both;
+  padding-right: 40px;
+}
+
+#rolling-text {
+  text-align: justify;
+  float: left;
+  margin: 10px;
+  margin-left: 80px;
+  padding-left: 20px;
+  width: 300px;
+  color: #808080;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+}
+
+
+/*
+    //////////////////
+    This is the styling for the rolling features section
+    //////////////////
+*/
+
+#rolling-feature {
+ /* TODO: change this for the finished site. Just for WIP mode */
+ margin-bottom: 150px;
+ margin-top: 50px;
+}
+
+#rolling-feature-section {
+ overflow: auto;
+ display: block;
+}
+
+#rolling-feature-div {
+ float: none;
+ width: 170px;
+ margin: 50px;
+ margin-top: 0;
+ display: inline-block;
+}
+
+#rolling-feature-div p {
+ text-align: center;;
+ color: #808080;
+ font-family: 'Raleway', sans-serif;
+ font-weight: 200;
+ font-size: 16px;
+}
+
+#rolling-feature-image {
+ margin: 10px;
+}
+
+
+/*
+   //////////////////
+   This is the styling for the rolling features section
+   //////////////////
+*/
+
+#opinion {
+  border: 2px solid darkgrey;
+  margin-bottom: 100px;
+}
+
+#opinion p {
+  color: #808080;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  overflow: auto;
+  text-align: center;;
+  margin: 20px;
+  padding: 20px;
+}
+
+#opinion form {
+  margin-bottom: 50px;
+}
+
+#opinion button {
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 20px;
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+#flying-button {
+  background-color: white;
+  color: #008CBA;
+  border: 2px solid #008CBA;
+}
+
+#flying-button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+#rolling-button {
+  background-color: white;
+  color: rgb(255, 185, 42);
+  border: 2px solid rgb(255, 185, 42);
+}
+
+#rolling-button:hover {
+  background-color: rgb(255, 185, 42);
+  color: white;
+}
+
+
+/*
+    //////////////////
+    This is the styling for the shop section
+    //////////////////
+ */
+
+/* TODO: replace all these id stylings with just #shop p{}, #shop img{}, etc. since
+    we're styling all elements of one type identically */
+
+ #shop-header {
+   color: #808080;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 600;
+   font-size: 45px;
+   overflow: auto;
+   text-align: center;;
+   margin: 20px;
+   padding: 20px;
+ }
+
+ #shop-section {
+  overflow: auto;
+  display: block;
+ }
+
+ #shop-div {
+  float: none;
+  width: 200px;
+  margin: 20px;
+  margin-top: 0;
+  display: inline-block;
+ }
+
+ #shop-div p {
+  text-align: center;;
+  color: #808080;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+ }
+
+ #shop-image {
+  margin: 10px;
+ }
