@@ -22,10 +22,17 @@
     <!-- Font for the heading -->
     <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:200, 600' rel='stylesheet' type='text/css'>
+
+    <!-- This is the cdn for angular -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script> -->
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
   </head>
+
+  <!-- TODO: THIS IS BIG - GET RID OF DUPLICATE ID'S AND MAKE THEM CLASSES!!! -->
+
   <body>
 
     <div id="wrapper">
@@ -117,12 +124,16 @@
 
       <section id="opinion">
         <p>
-          Which city would you choose to escape the apocalypse?
+          Which city will you choose to escape the coming apocalypse?
         </p>
         <form>
-          <button id="flying-button">Flying City</button>
-          <button id="rolling-button">Rolling City</button>
+          <button id="flying-vote" class="flying-button" type="button">Flying City</button>
+          <button id="rolling-vote" class="rolling-button" type="button">Rolling City</button>
         </form>
+        <!-- TODO: destroy this placeholder and replace with bar graph -->
+        <p>
+          {{test}}
+        </p>
       </section>
 
       <section id="shop">
@@ -135,18 +146,51 @@
             <p>
             This flying feature is a cool one. This flying feature is a cool one. This flying feature is a cool one.
             </p>
+            <form action="server_page_here.rb" method="post">
+              <input placeholder="Up to 9 shirts max!" type="number" min="1" max="9" step="1" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)"/>
+              <div class="shop-select">
+                <select>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+              <button id="shop-btn-1" class="flying-button" type="submit">Add To Cart</button>
+            </form>
           </div>
           <div id="shop-div">
             <img id="shop-image" src="resources/images/rollingTShirt.jpg"/>
             <p>
             This flying feature is a cool one. This flying feature is a cool one. This flying feature is a cool one.
             </p>
+            <form action="server_page_here.rb" method="post">
+              <input placeholder="Up to 9 shirts max!" type="number" min="1" max="9" step="1" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)"/>
+              <div class="shop-select">
+                <select>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+              <button id="shop-btn-2" class="rolling-button" type="submit">Add To Cart</button>
+            </form>
           </div>
           <div id="shop-div">
             <img id="shop-image" src="resources/images/flyingTShirt.jpg"/>
             <p>
             This flying feature is a cool one. This flying feature is a cool one. This flying feature is a cool one.
             </p>
+            <form action="server_page_here.rb" method="post">
+              <input placeholder="Up to 9 shirts max!" type="number" min="1" max="9" step="1" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)"/>
+              <div class="shop-select">
+                <select>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+              <button id="shop-btn-3" class="flying-button" type="submit">Add To Cart</button>
+            </form>
           </div>
         </p>
       </section>
@@ -159,17 +203,12 @@
 
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    -->
-    <!-- JQuery version 2.2.3, little more updated that 1.11.3
-    <script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
-    -->
+
 
     <!-- Include all compiled plugins (below), or include individual files as needed
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     -->
     <!-- This is the main entry point for the javascript stuff -->
-    <script src="resources/js/main.js"></script>
+    <script src="resources/js/app.js"></script>
   </body>
 </html>

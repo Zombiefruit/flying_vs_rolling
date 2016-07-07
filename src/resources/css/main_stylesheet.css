@@ -15,6 +15,53 @@
   font-weight: 600;
 }
 
+.flying-button {
+  background-color: white;
+  color: #008CBA;
+  border: 2px solid #008CBA;
+}
+
+.flying-button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.rolling-button {
+  background-color: white;
+  color: rgb(255, 185, 42);
+  border: 2px solid rgb(255, 185, 42);
+}
+
+.rolling-button:hover {
+  background-color: rgb(255, 185, 42);
+  color: white;
+}
+
+.increase-size {
+  padding-bottom: 200px;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: white;
+  color: darkgrey;
+  border: 2px solid darkgrey;
+}
+
+input:focus {
+  outline: 0;
+}
+
+select:focus {
+  outline: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
 body {
   text-align: center;
   margin: 0;
@@ -303,6 +350,8 @@ h1 {
 #opinion {
   border: 2px solid darkgrey;
   margin-bottom: 100px;
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
 }
 
 #opinion p {
@@ -334,29 +383,6 @@ h1 {
   font-size: 16px;
 }
 
-#flying-button {
-  background-color: white;
-  color: #008CBA;
-  border: 2px solid #008CBA;
-}
-
-#flying-button:hover {
-  background-color: #008CBA;
-  color: white;
-}
-
-#rolling-button {
-  background-color: white;
-  color: rgb(255, 185, 42);
-  border: 2px solid rgb(255, 185, 42);
-}
-
-#rolling-button:hover {
-  background-color: rgb(255, 185, 42);
-  color: white;
-}
-
-
 /*
     //////////////////
     This is the styling for the shop section
@@ -365,39 +391,106 @@ h1 {
 
 /* TODO: replace all these id stylings with just #shop p{}, #shop img{}, etc. since
     we're styling all elements of one type identically */
+#shop {
+  margin-bottom: 200px;
+}
 
- #shop-header {
-   color: #808080;
-   font-family: 'Raleway', sans-serif;
-   font-weight: 600;
-   font-size: 45px;
-   overflow: auto;
-   text-align: center;;
-   margin: 20px;
-   padding: 20px;
- }
+#shop-header {
+ color: #808080;
+ font-family: 'Raleway', sans-serif;
+ font-weight: 600;
+ font-size: 45px;
+ overflow: auto;
+ text-align: center;;
+ margin: 20px;
+ padding: 20px;
+}
 
- #shop-section {
+#shop-section {
   overflow: auto;
   display: block;
- }
+}
 
- #shop-div {
+#shop-div {
   float: none;
   width: 200px;
   margin: 20px;
   margin-top: 0;
   display: inline-block;
- }
+}
 
- #shop-div p {
-  text-align: center;;
+#shop-div p {
+  text-align: center;
   color: #808080;
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
   font-size: 16px;
+}
+
+#shop-image {
+  margin: 10px;
+}
+
+#shop button {
+ padding: 16px 42px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ margin: 4px 10px;
+ -webkit-transition-duration: 0.2s; /* Safari */
+ transition-duration: 0.2s;
+ cursor: pointer;
+ font-family: 'Raleway', sans-serif;
+ font-weight: 200;
+ font-size: 16px;
+}
+
+#shop input {
+	border: 1px solid #808080;
+	color: #808080;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+	margin: 10px;
+	padding: 10px;
+	width: 150px;
  }
 
- #shop-image {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*
+TODO: replace this stuff with the select2 plugin using JQuery: https://select2.github.io/examples.html
+
+ */
+
+#shop select {
+  background: transparent;
+  border: none;
+  width: 172px;
+  height: 45px;
+  color: #808080;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.shop-select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  display: inline-block;
+  width: 172px;
+  height: 45px;
   margin: 10px;
- }
+  border: 1px solid #808080;
+  margin-bottom: 30px;
+  /*padding: 20px;*/
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
